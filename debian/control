@@ -1,0 +1,15 @@
+Source: evb-systemd
+Priority: optional
+Maintainer: David Lechner <david@lechnology.com>
+Build-Depends: debhelper (>= 9.0.0), dh-systemd (>= 1.5)
+Standards-Version: 3.9.5
+Section: embedded
+Homepage: http://www.ev3dev.org
+Vcs-Git: git://github.com/ev3dev/evb-systemd.git
+Vcs-Browser: https://github.com/ev3dev/evb-systemd
+
+Package: evb-systemd
+Architecture: armhf
+Depends: ev3dev-rules, ${misc:Depends}
+Description: Systemd unit files and udev rules for FatcatLab's EVB.
+ This package is only useful for FatcatLab's EVB on BeagleBone.
