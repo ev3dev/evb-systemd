@@ -1,10 +1,10 @@
 # This file is part of the evb-systemd package
 
 # Create symlink for serial ports to match EVB input ports
-KERNEL=="ttyS4", SYMLINK+="tty_in1"
-KERNEL=="ttyS2", SYMLINK+="tty_in2"
-KERNEL=="ttyS1", SYMLINK+="tty_in3"
-KERNEL=="ttyS5", SYMLINK+="tty_in4"
+KERNEL=="ttyS4", SYMLINK+="tty_evb-ports:in1"
+KERNEL=="ttyS2", SYMLINK+="tty_evb-ports:in2"
+KERNEL=="ttyS1", SYMLINK+="tty_evb-ports:in3"
+KERNEL=="ttyS5", SYMLINK+="tty_evb-ports:in4"
 
 # Start EV3 UART sensor line discipline when UART sensor is connected
 SUBSYSTEMS=="lego", ENV{DEVTYPE}=="ev3-uart-host", ACTION=="add", TAG+="systemd", \
