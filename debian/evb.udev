@@ -8,5 +8,6 @@ KERNEL=="ttyS5", SYMLINK+="tty_evb-ports:in4"
 
 # Start EV3 UART sensor line discipline when UART sensor is connected
 SUBSYSTEMS=="lego", ENV{DEVTYPE}=="ev3-uart-host", ACTION=="add", TAG+="systemd", \
-    ENV{SYSTEMD_WANTS}="ev3-uart@$env{LEGO_ADDRESS}.service", \
+    PROGRAM="/bin/systemd-escape $env{LEGO_ADDRESS}" \
+    ENV{SYSTEMD_WANTS}="ev3-uart@$result.service", \
     ENV{SYSTEMD_ALIAS}="/sys/subsystem/lego/devices/ev3_uart_host_$env{LEGO_ADDRESS}"

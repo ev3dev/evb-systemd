@@ -7,4 +7,4 @@ BindsTo=sys-subsystem-lego-devices-ev3_uart_host_%i.device
 
 [Service]
 Type=forking
-ExecStart=/usr/sbin/ldattach 29 /dev/tty_%i
+ExecStart=/usr/sbin/ldattach 29 /dev/tty_%I
