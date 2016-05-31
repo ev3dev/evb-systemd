@@ -1,3 +1,9 @@
+evb-systemd (3) stable; urgency=medium
+
+  * Fix ev3-uart@.service not unloaded when sensor disconnected
+
+ -- David Lechner <david@lechnology.com>  Tue, 31 May 2016 11:33:16 -0500
+
 evb-systemd (2) stable; urgency=medium
 
   * Change tty symlinks to match ev3dev kernel cycle 10 changes
